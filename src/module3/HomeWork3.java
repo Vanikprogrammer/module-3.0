@@ -1,3 +1,5 @@
+package module3;
+
 import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.lang.reflect.Array;
@@ -9,14 +11,15 @@ import java.util.Scanner;
  */
 public class HomeWork3 {
     public static void main(String[] args) {
+
+        // ДЗ основное
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите размер массива:");
 
         int length = sc.nextInt();
-        sc.nextLine();
         int i = 0;
         int arr[] = new int[length];
-        System.out.println("Введите 5 случайных чисел:");
+        System.out.println("Введите " + length + " случайных чисел:");
 
         while (i < arr.length){
             arr[i] = sc.nextInt(); //заполняем массив случайными числами
@@ -25,17 +28,21 @@ public class HomeWork3 {
         int min = arr[0];
         int max = arr[0];
         int five = 0;
+        int count = 0;
         for(int x = 0; x < arr.length; x++){ // вычисляем максимальное и минимальное значения
             if(arr[x] > max){
                 max = arr[x];
-            }else{
+            }else if(arr[x] < min){
                 min = arr[x];
             }
             if (arr[x]==5){
                 five++;
             }
             }
-        System.out.println("Количество повторений числа 5 = " + five);
+        System.out.println();
+        System.out.println("Максимальным числом в массиве является " + max +"\n");
+        System.out.println("Минимальным числом в массиве является "+ min + "\n");
+        System.out.println("Количество повторений числа 5 = " + five +"\n");
 
         for(int s = arr.length - 1; s >= 0; s--){
             for(int j = 0; j < s; j++) {
@@ -48,7 +55,10 @@ public class HomeWork3 {
             }
         System.out.print("Отсортированный массив выглядит следующим образом: ");
             for(int z:arr){
-            System.out.print(z);}
+            System.out.print(z+" ,");}
+
+            // ДЗ дополнительное
+
         }
 
         }
